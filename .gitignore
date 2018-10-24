@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rbuildignore
+.DS_Store
+data
+analysis-report-01-amplicons.Rproj
