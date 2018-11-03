@@ -1,5 +1,5 @@
 in---
-title: "Analysis Report 1: Your Title Here"
+title: "Analysis Report 1: Compare different bacterial taxa on male vs female hands
 author: "Sanam Sajjadi"
 date: "November 11, 2018"
 output: github_document
