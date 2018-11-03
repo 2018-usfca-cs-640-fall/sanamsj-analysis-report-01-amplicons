@@ -302,6 +302,7 @@ plot_bar(sex_phyloseq_obj,
 
 **Figure3** Diversity of differenet phyla in both genders colored by class.
 
+This graph shows that most of the bacteria were from Actinobactria and Firmicutes classes.
 
 
 
