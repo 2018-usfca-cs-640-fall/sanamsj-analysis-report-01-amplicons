@@ -211,7 +211,7 @@ taxa <- assignTaxonomy(sequence_table_nochim,
                        tryRC = TRUE) # also check with seq reverse compliments
 
 # show the results of the taxonomy assignment
-# unname(taxa); #
+unname(taxa); #
 ```
 
 ```{r extract-sequences-to-fasta}
@@ -280,7 +280,7 @@ plot_bar(phyloseq_obj, x = "Sex")
 
 
 ```{r table-contains-sources-of-sequences-in-both-genders}
-table(factor(metadata_in$sample_source) , factor (metadata_in$Sex))
+table(factor(metadata_in$sample_source), factor(metadata_in$Sex))
 
 ```
 
@@ -292,9 +292,9 @@ swabbed from spacebar key.
 
 
 ```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
-sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source= "sex")
+sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source = "sex")
 plot_bar(sex_phyloseq_obj,
-         x = "Phylum" ,
+         x = "Phylum",
          fill = "Class")
 
 
@@ -324,7 +324,7 @@ male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
 plot_bar(male_phyloseq_obj, x = "Class")
 ```
        
-**FIgure 5**: Histogram that represents the diversity of bacteria in males samples.
+**Figure 5**: Histogram that represents the diversity of bacteria in males samples.
 
 This histogram shows that most of the bacteria were from Actinobacteria and Bacillii classes.
 
