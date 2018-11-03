@@ -279,16 +279,19 @@ plot_bar(phyloseq_obj, x = "Sex")
  Most of sequences were from males and only few females were in this project.
 
 
-```{r table-gender-and-sequences}
+```{r table-contains-sources-of-sequences-in-both-genders}
 table(factor(metadata_in$sample_source) , factor (metadata_in$Sex))
 
 ```
 
-**Figure**2
+**Figure 2**: Table that describes the sources of the sequences in both genders.
+
+Most of the sequences were from males samples and only 3 females samples were 
+swabbed from spacebar key. 
 
 
 
-```{r-histogram of examining diversity of phyla acroos sample set in both gender}
+```{r-histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
 sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source= "sex")
 plot_bar(sex_phyloseq_obj,
          x = "Phylum" ,
@@ -297,7 +300,9 @@ plot_bar(sex_phyloseq_obj,
 
 ```
 
-**Figure3** Diversity of differenet phyla in both gender colored by class.
+**Figure3** Diversity of differenet phyla in both genders colored by class.
+
+
 
 
 ```{r}
