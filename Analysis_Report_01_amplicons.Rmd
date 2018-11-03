@@ -268,7 +268,7 @@ phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
 ```
 
 
-```{r-histogram-showoing-the-abundance-of-sequences-in-both-genders}
+```{r histogram-showoing-the-abundance-of-sequences-in-both-genders}
 # bar plot of samples
 plot_bar(phyloseq_obj, x = "Sex")
 ```
@@ -291,7 +291,7 @@ swabbed from spacebar key.
 
 
 
-```{r-histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
+```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
 sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source= "sex")
 plot_bar(sex_phyloseq_obj,
          x = "Phylum" ,
@@ -306,31 +306,29 @@ This graph shows that most of the bacteria were from Actinobactria and Firmicute
 
 
 
-```{r-histogram-showing-the-abundance-of-different-classes-of-bacteria-in-females-sequences}
+```{r histogram-showing-the-abundance-of-different-bacteria-in-females-samples}
 female_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "female")
 plot_bar(female_phyloseq_obj, x = "Class")
 ```
 
-**Figure4**: Histogram that shows the diversity of bacteria on females samples.
+
+**Figure4**: Histogram that represents the diversity of bacteria in females samples.
 
 This histogram shows that most of the bacteria were from Actinobacteria,
 Bacilli and Chloroplast classes.
        
        
        
-       
-      
-       
-       
-```{r abundance-of-different-strains-in-male-sequences}
+```{r histogram-showing-the-abundance-of-different-of-bacteria-in-males-samples}
 male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
 plot_bar(male_phyloseq_obj, x = "Class")
 ```
-**FIgure 4**:Represent abundance of different sequences and strains in male samples.
+       
+**FIgure 5**: Histogram that represents the diversity of bacteria in males samples.
+
+This histogram shows that most of the bacteria were from Actinobacteria and Bacillii classes.
 
 
-
-**Figure 2**: Inferred phylogeny of sequences, with points on tips representing samples within which each particular taxa occurred. Tree represents phylogeny inferred using FastTree.
 
 
 # Discussion
