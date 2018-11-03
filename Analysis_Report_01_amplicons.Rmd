@@ -1,6 +1,6 @@
----
+in---
 title: "Analysis Report 1: Your Title Here"
-author: "Don Francisco"
+author: "Sanam Sajjadi"
 date: "November 11, 2018"
 output: github_document
 bibliography: references.bib
@@ -80,7 +80,7 @@ filenames_forward_reads <- file.path(path, filenames_forward_reads)
 ```
 
 ```{r check-quality-plots}
-# Plots the quality profiles of all twenty samples
+# Plots the quality profiles of all the first twenty samples
 plotQualityProfile(filenames_forward_reads[1:20])
 ```
 
@@ -106,7 +106,7 @@ filtered_output <- filterAndTrim(fwd = filenames_forward_reads,
                                  truncQ = 2, # cut off if quality gets this low
                                  rm.phix = TRUE,
                                  compress = TRUE,
-                                 multithread = FALSE)
+                                 multithread = TRUE)
 ```
 
 ```{r filtered-read-counts-table}
@@ -207,11 +207,11 @@ kable(track)
 # made up of known sequences
 taxa <- assignTaxonomy(sequence_table_nochim,
                        "data/training/rdp_train_set_16.fa.gz",
-                       multithread = FALSE,
+                       multithread = TRUE,
                        tryRC = TRUE) # also check with seq reverse compliments
 
 # show the results of the taxonomy assignment
-unname(taxa)
+# unname(taxa); #
 ```
 
 ```{r extract-sequences-to-fasta}
@@ -267,25 +267,74 @@ phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
                          phy_tree(tree_in)) # phylogeny from sequence variants
 ```
 
-```{r example-phyloseq-plot-1}
-# alpha diversity metrics
-plot_richness(phyloseq_obj,
-              x = "sample_type",
-              measures = c("Shannon", "Simpson"),
-              color = "Sex") +
-  xlab("Sample origin") +
-  geom_jitter(width = 0.2) +
-  theme_bw()
+
+```{r-histogram-abundance of sequences in both genders}
+# bar plot of samples
+plot_bar(phyloseq_obj, x = "Sex")
 ```
 
-**Figure 1**: Alpha diversity measures of the two sample types, colored by gender.
 
-```{r example-phyloseq-plot-2}
-# phylogeny, yay!
-plot_tree(phyloseq_obj,
-          color = "Sex",
-          ladderize = TRUE) # this arranges the tree branches from short to long
+**Figure 1**: Histogram that describes the abundance of sequences in both females and males.
+
+ Most of sequences were from males and only few females were in this project.
+
+
+```{r table-gender-and-sequences}
+table(factor(metadata_in$sample_source) , factor (metadata_in$Sex))
+
 ```
+
+**Figure**2
+
+
+
+```{r-histogram of examining diversity of phyla acroos sample set in both gender}
+sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source= "sex")
+plot_bar(sex_phyloseq_obj,
+         x = "Phylum" ,
+         fill = "Class")
+
+
+```
+
+**Figure3** Diversity of differenet phyla in both gender colored by class.
+
+
+```{r}
+female_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "female")
+plot_bar(female_phyloseq_obj, x = "Class")
+```
+
+       
+       
+       
+       
+       
+       
+       
+       
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+
+                          
+```{r abundance-of-different-strains-in-male-sequences}
+male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
+plot_bar(male_phyloseq_obj, x = "Class")
+```
+**FIgure 4**:Represent abundance of different sequences and strains in male samples.
+
+
 
 **Figure 2**: Inferred phylogeny of sequences, with points on tips representing samples within which each particular taxa occurred. Tree represents phylogeny inferred using FastTree.
 
