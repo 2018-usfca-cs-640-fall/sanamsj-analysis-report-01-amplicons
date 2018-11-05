@@ -1,7 +1,7 @@
 in---
 title: "Analysis Report 1: Compare different bacterial taxa on male vs female hands
 author: "Sanam Sajjadi"
-date: "November 11, 2018"
+date: "November 04, 2018"
 output: github_document
 bibliography: references.bib
 csl: bioinformatics.csl
@@ -106,7 +106,7 @@ filtered_output <- filterAndTrim(fwd = filenames_forward_reads,
                                  truncQ = 2, # cut off if quality gets this low
                                  rm.phix = TRUE,
                                  compress = TRUE,
-                                 multithread = TRUE)
+                                 multithread = FALSE)
 ```
 
 ```{r filtered-read-counts-table}
@@ -133,7 +133,7 @@ plotErrors(errors_forward_reads,
 ```{r dereplicate-sequences}
 # get rid of any duplicated sequences
 dereplicated_forward_reads <- derepFastq(filtered_reads_path,
-                                         verbose = TRUE)
+                                         verbose = FALSE)
 
 # Name the derep-class objects by the sample names
 names(dereplicated_forward_reads) <- sample_names
@@ -207,7 +207,7 @@ kable(track)
 # made up of known sequences
 taxa <- assignTaxonomy(sequence_table_nochim,
                        "data/training/rdp_train_set_16.fa.gz",
-                       multithread = TRUE,
+                       multithread = FALSE,
                        tryRC = TRUE) # also check with seq reverse compliments
 
 # show the results of the taxonomy assignment
@@ -319,7 +319,7 @@ Bacilli and Chloroplast classes.
        
        
        
-```{r histogram-showing-the-abundance-of-different-of-bacteria-in-males-samples}
+```{r histogram-showing-the-abundance-of-different-bacteria-in-males-samples}
 male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
 plot_bar(male_phyloseq_obj, x = "Class")
 ```
