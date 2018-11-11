@@ -1,5 +1,5 @@
 in---
-title: "Analysis Report 1: Compare different bacterial taxa on male vs female hands
+title: "Analysis Report 1: Influence of Physiological factors on female and male microbiome composition
 author: "Sanam Sajjadi"
 date: "November 04, 2018"
 output: github_document
@@ -9,12 +9,18 @@ csl: bioinformatics.csl
 
 # Introduction
 
-Add about 1.5-2 pages here. Must cite at least 5 peer reviewed articles.
+Skin is the external interface of the human body with the environment and also the home to many non-pathogenic microbiomes. Interestingly estimation shows that the human body is inhabited by ten times as many non-human cells as human cells! 
+Recent investigations demonstrate that knowledge of new generation sequencing has become essential for basic biological research specifically, in understanding microbiome diversity on the human skin and gut microbiome. Therefore, human microbiome and new generation sequencing have a critical relationship that plays valuable role in aiding further development of many applications such as forensic studies and medicine. 
+There are several studies which demonstrate effective factors in changing microbiome composition. According to these studies environmental factors, host species and diet are important elements causing the huge diversity on human microbiome.An analysis of skin bacterial microbiota through sequencing of 16S ribosomal RNA genes highlighted the extensive diversity of organisms that live on the human skin [@grice2011skin].A vast majority of these colonizing microbiota are beneficial to the human host, while others cause skin disorders such as acne, atopic dermatitis, seborrheic dermatitis, and chronic wounds [@grice2011skin].Changes to microbial communities can contribute to cutaneous disorders, while the maintenance of these communities has a reciprocal nature in order to modulate skin immunity [@sanmiguel2015interactions].
+The study of the total number of bacteria that live on the human host provide valuable insight into normal immune system function and the etiology of infectious diseases that were once more elusive [@cox2013sequencing]
+Additional research revealed that the skin surface plays a critical role in influencing human health based on the microbial community that lives on it. The epithelial surface is protected below the follicular opening by hair follicles and sweat ducts which increase the skins surface area from 2 m2 to 25m2. Thus, the skin offers a great area for microbial organisms to live [@gallo2017human].
+The physical location that a person lives plays a critical role in the type of microbial communities that live on the skin. People living in urban environments have a significantly greater abundance of Trabulsiella, and the overall skin-associated bacterial communities and structure were evident based on location [@ying2015influence]. Further, the study of the microbiology of indoor spaces revealed that humans share their interior environment with countless bacteria and fungi, which may negatively impact the rates of acute and chronic illness [@kelley2013studying]. Understanding the prevalence of bacteria species in different environments allows for considerations related to health and ways to improve these locations.   
+New generation sequencing technology is an important analytical tool in forensic studies that allows for application in the DNA database construction, body fluid and species identification, ancestry and phenotypic inference, twin studies, and microbiological analysis [@yang2014application]. In the other related study researhcher asserted that new generation sequencing allows for the analysis of a microbial community to create a more accurate forensic profile. By studying the microbiome that is present in the trace evidence, new generation sequencing helps forensics experts make critical connections that will help criminal justice professionals solve crime [@kuiper2016microbial] . In a study of microbiomes on cell phones and shoes, scientists determined that there was a distinct correlation between microbial community sources which highlights the way in which people interact with their environment [@lax2015forensic]. Additional research found that cell phones contain a significant amount of the personal microbiome of their owners. Human’s DNA extraction and sequencing enabled us to determine gender of the fingertip’s owner in forensic cases. Now microbiome composition can also be used to distinguish gender in forensic cases [@meadow2014mobile]. Also in one of the related studies scientists claimed that sex differences have clear impact on shaping gut microbial composition in mice. Regarding their hypotheses it is possible to differentiate mice genders according to their microbiome composition [@org2016sex] . Through the study of human skin’s microbiome and conducting new generation sequencing techniques Fierer eta al., argued that each individual harbors personally unique, stable and transferable skin microbiome that can be used as “fingerprints” for forensic identification.
+The hypotheses described above represent a valuable alternative to the other standard techniques like human DNA analysis and finger print analysis. For instance, it is usually difficult to acquire sufficient human DNA for forensic identification, since sufficient amount of saliva, blood or tissues is needed, however it may be easier to recover bacterial DNA from the touched surfaces. (additional studies needed to confirm this hypotheses) [@fierer2010forensic]. In this analysis report on Fierer’s research I will discuss and demonstrate that there would be a distinct microbial composition differences between genders. I will assume that Physiological differences can be one of the major elements of these differences. I will compare the microbial community on males and females and investigate the factors that may cause these comparisons.
 
 # Methods
 
 ## Sample origin and sequencing
-
 Add about half a page here. In this section instead of first person (I/we), use Fierer et al., since you'll just be describing what they did, based on the methods in their paper.
 
 ## Computational
@@ -47,7 +53,7 @@ library("citr")
 # see info here: https://benjjneb.github.io/dada2/dada-installation.html
 library("dada2")
 
-# This to export a fasta of our final denoised sequence variants
+# This to export a fasta of our final denoised sequence variant
 library("seqinr")
 
 # To install this you have to install from GitHub
@@ -291,7 +297,7 @@ swabbed from spacebar key.
 
 
 
-```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
+```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-gender}
 sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source = "sex")
 plot_bar(sex_phyloseq_obj,
          x = "Phylum",
@@ -300,9 +306,9 @@ plot_bar(sex_phyloseq_obj,
 
 ```
 
-**Figure3** Diversity of differenet phyla in both genders colored by class.
+**Figure3** Diversity of different phyla in both gender colored by class.
 
-This graph shows that most of the bacteria were from Actinobactria and Firmicutes classes.
+This graph shows that most of the bacteria were from Actinobactria and Firmicutes Phyla.
 
 
 
@@ -312,7 +318,7 @@ plot_bar(female_phyloseq_obj, x = "Class")
 ```
 
 
-**Figure4**: Histogram that represents the diversity of bacteria in females samples.
+**Figure4**: Histogram that represents the diversity of bacteria in female samples.
 
 This histogram shows that most of the bacteria were from Actinobacteria,
 Bacilli and Chloroplast classes.
@@ -324,7 +330,7 @@ male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
 plot_bar(male_phyloseq_obj, x = "Class")
 ```
        
-**Figure 5**: Histogram that represents the diversity of bacteria in males samples.
+**Figure 5**: Histogram that represents the diversity of bacteria in male samples.
 
 This histogram shows that most of the bacteria were from Actinobacteria and Bacillii classes.
 
