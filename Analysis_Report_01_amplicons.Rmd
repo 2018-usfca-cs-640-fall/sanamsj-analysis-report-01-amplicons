@@ -34,8 +34,13 @@ Following denoising procedure other related packages like “seqinr” and “ph
 
 
 # Results
+Results: In order to compare the microbial communities in both genders, abundance of sequences are important. In this histogram we can see that there were only a few sequences from females, while most of the sequences were from males (Figure 1). In the following table in order to confirm the result from the previous histogram we tried to see how many samples were from both males and females and where the samples had swabbed from (Sources of the samples which were from different keys on the keyboard). Most of the samples were from males and had been swabbed from different keys. Only 3 samples were from females which were swabbed from the spacebars (Represent a portion of the space bar’s samples). The total of 30 samples had been swabbed from males fingertips. (Table 1)
+To visualize the microbial communities that were present in the whole male and female samples, a histogram was created (Figure 2). The diversity of phyla evident in Fig.2 represent five different phyla of bacteria that were present in the samples. More than 6000 sequences were from Actinobacteria, around 3000 sequences were from Firmicutes, and a small portion of the sequences were from Proteobacteria, Cyanobacteria and Bacteroidetes.
+To visualize the different classes of bacteria in the samples from females, a histogram was created (Figure 3) In this histogram we can see that more than 750 sequences were from Actinobacteria class, around 300 sequences were from Bacilli class, 240 sequences were from chloroplast class and a few portions of the sequences were in Alphaproteobacteria, Bacteroidia , Betaproteobacteria, Deinooocci, Flavobacteriia ,Gammaproteobacteria and Negativicutes Classes.
+The same histogram was generated for microbial communities found in males (Figure 4). In this histogram we can see that more than 6000 sequences were from Actinobacteria class, around 2000 sequences were from Bacilli class, and 1000 sequences were from Clostridia class. Small portion of the sequences were from Chloroplast, Gammaproteobacteria, Bacteroidia, Betaproteobacteria and Negativicutes.
 
-In addition to a minimum of 3-4 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion.
+
+
 
 ```{r load-libraries, message = FALSE}
 # Be sure to install these packages before running this script
