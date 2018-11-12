@@ -16,7 +16,7 @@ The study of the total number of bacteria that live on the human host provide va
 Additional research revealed that the skin surface plays a critical role in influencing human health based on the microbial community that lives on it. The epithelial surface is protected below the follicular opening by hair follicles and sweat ducts which increase the skins surface area from 2 m2 to 25m2. Thus, the skin offers a great area for microbial organisms to live [@gallo2017human].
 The physical location that a person lives plays a critical role in the type of microbial communities that live on the skin. People living in urban environments have a significantly greater abundance of microbes, and the overall skin-associated bacterial communities and structure were evident based on location [@ying2015influence]. Further, the study of the microbiology of indoor spaces revealed that humans share their interior environment with countless bacteria and fungi, which may negatively impact the rates of acute and chronic illness [@kelley2013studying]. Understanding the prevalence of bacteria species in different environments allows for considerations related to health and ways to improve these locations.   
 New generation sequencing technology is an important analytical tool in forensic studies that allows for application in the DNA database construction, body fluid and species identification, ancestry and phenotypic inference, twin studies, and microbiological analysis [@yang2014application]. In the other related study researhcher asserted that new generation sequencing allows for the analysis of a microbial community to create a more accurate forensic profile. By studying the microbiome that is present in the trace evidence, new generation sequencing helps forensics experts make critical connections that will help criminal justice professionals solve crime [@kuiper2016microbial] . In a study of microbiomes on cell phones and shoes, scientists determined that there was a distinct correlation between microbial community sources which highlights the way in which people interact with their environment [@lax2015forensic]. Additional research found that cell phones contain a significant amount of the personal microbiome of their owners. Human’s DNA extraction and sequencing enabled us to determine gender of the fingertip’s owner in forensic cases. Now microbiome composition can also be used to distinguish gender in forensic cases [@meadow2014mobile]. Also in one of the related studies scientists claimed that sex differences have clear impact on shaping gut microbial composition in mice. Regarding their hypotheses it is possible to differentiate mice genders according to their microbiome composition [@org2016sex] . Through the study of human skin’s microbiome and conducting new generation sequencing techniques Fierer eta al., argued that each individual harbors personally unique, stable and transferable skin microbiome that can be used as “fingerprints” for forensic identification.
-The hypotheses described above represent a valuable alternative to the other standard techniques like human DNA analysis and finger print analysis. For instance, it is usually difficult to acquire sufficient human DNA for forensic identification, since sufficient amount of saliva, blood or tissues is needed, however it may be easier to recover bacterial DNA from the touched surfaces. (additional studies needed to confirm this hypotheses) [@fierer2010forensic]. In this analysis report on Fierer’s research I will discuss and demonstrate that there would be a distinct microbial composition differences between genders. I will assume that physiological differences can be one of the major elements of these differences. I will compare the microbial community on males and females and investigate the factors that may cause these comparisons.
+The hypotheses described above represent a valuable alternative to the other standard techniques like human DNA analysis and finger print analysis. For instance, it is usually difficult to acquire sufficient human DNA for forensic identification, since sufficient amount of saliva, blood or tissues is needed, however it may be easier to recover bacterial DNA from the touched surfaces [@fierer2010forensic] (additional studies needed to confirm this hypotheses). In this analysis report on Fierer’s research I will discuss and demonstrate that there would be a distinct microbial composition differences between genders. I will assume that physiological differences can be one of the major elements of these differences. I will compare the microbial community on males and females and investigate the factors that may cause these comparisons.
 
 # Methods
 
@@ -301,7 +301,7 @@ table(factor(metadata_in$sample_source), factor(metadata_in$Sex))
 
 ```
 
-**Figure 2**: Table that describes the sources of the sequences in both genders.
+**Table 1**: Table that describes the sources of the sequences in both genders.
 
 Most of the sequences were from male samples and only 3 female samples were 
 swabbed from spacebar key. 
@@ -317,7 +317,7 @@ plot_bar(sex_phyloseq_obj,
 
 ```
 
-**Figure3** Diversity of different phyla in both genders colored by class.
+**Figure2** Diversity of different phyla in both genders colored by class.
 
 This graph shows that most of the bacteria were from Actinobactria and Firmicutes Phyla.
 
@@ -329,7 +329,7 @@ plot_bar(female_phyloseq_obj, x = "Class")
 ```
 
 
-**Figure4**: Histogram that represents the diversity of bacteria in female samples.
+**Figure3**: Histogram that represents the diversity of bacteria in female samples.
 
 This histogram shows that most of the bacteria were from Actinobacteria,
 Bacilli and Chloroplast classes.
@@ -341,7 +341,7 @@ male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
 plot_bar(male_phyloseq_obj, x = "Class")
 ```
        
-**Figure 5**: Histogram that represents the diversity of bacteria in male samples.
+**Figure4**: Histogram that represents the diversity of bacteria in male samples.
 
 This histogram shows that most of the bacteria were from Actinobacteria and Bacillii classes.
 
