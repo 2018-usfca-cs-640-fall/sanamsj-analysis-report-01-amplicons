@@ -293,7 +293,7 @@ plot_bar(phyloseq_obj, x = "Sex")
 
 **Figure 1**: Histogram that describes the abundance of sequences in both females and males.
 
- Most of the sequences were from males and only few females were in this project.
+ Most of the sequences were from males and only a few females were in this project.
 
 
 ```{r table-contains-sources-of-sequences-in-both-genders}
@@ -303,12 +303,12 @@ table(factor(metadata_in$sample_source), factor(metadata_in$Sex))
 
 **Figure 2**: Table that describes the sources of the sequences in both genders.
 
-Most of the sequences were from males samples and only 3 females samples were 
+Most of the sequences were from male samples and only 3 female samples were 
 swabbed from spacebar key. 
 
 
 
-```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-gender}
+```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
 sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source = "sex")
 plot_bar(sex_phyloseq_obj,
          x = "Phylum",
@@ -317,7 +317,7 @@ plot_bar(sex_phyloseq_obj,
 
 ```
 
-**Figure3** Diversity of different phyla in both gender colored by class.
+**Figure3** Diversity of different phyla in both genders colored by class.
 
 This graph shows that most of the bacteria were from Actinobactria and Firmicutes Phyla.
 
@@ -349,8 +349,13 @@ This histogram shows that most of the bacteria were from Actinobacteria and Baci
 
 
 # Discussion
+Complex communities of bacteria thrive on our skin. The microbial composition of these communities depends on skin characteristic, such as sebaceous gland, moisture, temperature, as well as environmental factors and host genders. According to our results there were common phyla and classes of bacteria that thrive on humans’ skin regardless of their genders. We found that the majority of the sequences present on human skin (both male and female) derived from the Actinobacteria and Firmicutes phyla, however Cyanobacteria/ Chloroplast, Bacteroidetes and Proteobacteria were also present in our samples. Actinobacteria is one of the largest phyla among the bacteria and represent gram-positive bacteria with high degree of G-C bases in their DNA. This group can be found in both soil and fresh water [@ventura2007genomics] . Firmicutes was the other phylum that were present in the highest degree on human skin. This phylum is also representing Gram-positive bacteria. Our results also confirmed that most of the bacteria that are present on both males and females skin are from the Actinobacteria and Bacilli classes, however there were some differences in classes of microbial compositions on both genders skin. The abundance of matching sequences was higher in males, and this is likely because that most of the sequences came from the male samples and only few female samples were in this research project. Also, the surface of the hand’s palm and fingertip in males is relatively larger than females and this may cause the higher abundance of sequences in males compare to females.  In order to compare different bacteria on both genders skins, we tried to have a deeper look in each gender and their different microbial classes.
+Clostridia is a class of bacteria from Firmicutes phylum that is only present on male hands. This group is commonly found in soil and will confirm either contact of their hands with soil or eating a vegetable that has not been washed carefully and contained soil.
+ Deinooocci and Flavobacteria were the two specific classes that were present only on female skin. 
+Floavobacteriia is a class of bacteria that are opportunistic pathogens. These are gram-negative bacteria that are widely distributed in soil and seawater habitats. Presence of these bacteria on female hands may also represent the contact of soil with their hands.
+Deinooocci is the other interesting class of bacteria from Deinocccus phylum which were only present on female hands. The natural habitat of this bacteria includes soil, animal faces, meat, and generally need a complex growth media in laboratory environments. This phylum of bacteria is known as one the toughest group for many different reasons. This class of bacteria can survive different conditions, like lack of nutrients and most importantly radiation. [@brim2000engineering]. According to our results when it comes to diversity of microbial composition it is outstanding that females tend to have a more diverse microbial structure than men. This is likely due to physiological differences such as skin conditions, pH of skin, and their Sex Hormones [@ying2015influence].  The skin pH in men is generally more acidic than women, and other studies also shows that microbial diversity is often lower in more acidic environments. Other reasons for why men and women have distinct hand microbial communities may include differences in sweat, sebum production, skin thickness and sex hormone production [@fierer2008influence].  To further resolve the effects of Physiological differences on microbial composition we have to design a new trial with specific criteria. Previous studies on microbiome confirmed that there would be many different factors that may affect microbial compositions, with limiting these factors we can demonstrate how such a hypothesis would be accurate. In this project we should swab our samples from an equal number of females and males which have a similar overall equal condition in terms of life style, job, age and environment. The result of this trial can demonstrate how the physiological differences in both females and males can change bacterial diversity in both genders. Taken together these findings would support the role of sex differences in shaping skin microbial communities. Sex hormones, Skin conditions such as pH and sebum ingredients appear to be responsible in part, however the exact pathways involved are unknown. In addition, hormonal organizational effects and sex chromosome effects may also play a role. Understanding how physiological differences affect skin microbial composition could ultimately lead to the many other useful applications such as forensics and medicine.
 
-Add around 2-3 pages interpreting your results and considering future directions one might take in analyzing these data.
+
 
 # Sources Cited
 
