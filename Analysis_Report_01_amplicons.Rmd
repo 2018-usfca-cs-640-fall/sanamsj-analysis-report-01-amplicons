@@ -1,7 +1,7 @@
 in---
-title: "Analysis Report 1: Influence of Physiological factors on female and male microbiome composition
+title: "Analysis Report 1: The Influence of Physiological Differences in Males and Females on their Skin’s Microbiome Composition
 author: "Sanam Sajjadi"
-date: "November 04, 2018"
+date: "November 11, 2018"
 output: github_document
 bibliography: references.bib
 csl: bioinformatics.csl
