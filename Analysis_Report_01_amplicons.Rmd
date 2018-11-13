@@ -328,7 +328,7 @@ sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source = "sex")
 plot_bar(sex_phyloseq_obj,
          x = "Phylum",
          fill = "Class")
-# The second histogram that shows the diffent phyla,help us to know the different phyla
+# The second histogram that shows the diffent phyla,to know the different phyla
 
 ```
 
@@ -339,7 +339,7 @@ This graph shows that most of the bacteria were from Actinobactria and Firmicute
 
 
 ```{r histogram-showing-the-abundance-of-different-bacteria-in-females-samples}
-# The third histogram that shows the females microbioms 
+# The third histogram that shows the females microbioms
 female_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "female")
 plot_bar(female_phyloseq_obj, x = "Class")
 ```
