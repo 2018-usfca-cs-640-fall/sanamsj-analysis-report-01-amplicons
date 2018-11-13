@@ -313,6 +313,7 @@ plot_bar(phyloseq_obj, x = "Sex")
 ```{r table-contains-sources-of-sequences-in-both-genders}
 table(factor(metadata_in$sample_source), factor(metadata_in$Sex))
 #The first table which shows the sample sources
+#To see the sources of the sequences
 ```
 
 **Table 1**: Table that describes the sources of the sequences in both genders.
@@ -327,7 +328,7 @@ sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source = "sex")
 plot_bar(sex_phyloseq_obj,
          x = "Phylum",
          fill = "Class")
-# The second histogram that shows the diffent phyla
+# The second histogram that shows the diffent phyla,help us to know the different phyla
 
 ```
 
@@ -338,7 +339,7 @@ This graph shows that most of the bacteria were from Actinobactria and Firmicute
 
 
 ```{r histogram-showing-the-abundance-of-different-bacteria-in-females-samples}
-# The third histogram that shows the females microbioms
+# The third histogram that shows the females microbioms 
 female_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "female")
 plot_bar(female_phyloseq_obj, x = "Class")
 ```
@@ -352,7 +353,7 @@ Bacilli and Chloroplast classes.
        
        
 ```{r histogram-showing-the-abundance-of-different-bacteria-in-males-samples}
-# The last histogram,shows the males microbiomes
+# The last histogram,shows the males microbiomes inorder to compare with females
 male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
 plot_bar(male_phyloseq_obj, x = "Class")
 ```
