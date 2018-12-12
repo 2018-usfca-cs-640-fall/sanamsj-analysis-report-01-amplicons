@@ -298,7 +298,7 @@ phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
                          phy_tree(tree_in)) # phylogeny from sequence variants
 ```
 
-
+**Figure1** : Abundance of sequences in both genders
 ```{r histogram-showoing-the-abundance-of-sequences-in-both-genders}
 # The first histogram that shows the abundance of seq in both genders
 plot_bar(phyloseq_obj, x = "Sex")
@@ -310,6 +310,10 @@ plot_bar(phyloseq_obj, x = "Sex")
  Most of the sequences were from males and only a few females were in this project.
 
 
+
+
+
+**Table 1** : Sources of sequences
 ```{r table-contains-sources-of-sequences-in-both-genders}
 table(factor(metadata_in$sample_source), factor(metadata_in$Sex))
 #The first table which shows the sample sources
@@ -323,6 +327,10 @@ swabbed from spacebar key.
 
 
 
+
+
+
+**Figure2**: Diversity of phyla across sample set
 ```{r histogram-examining-diversity-of-phyla-acroos-sample-set-in-both-genders}
 sex_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source = "sex")
 plot_bar(sex_phyloseq_obj,
@@ -338,6 +346,8 @@ This graph shows that most of the bacteria were from Actinobactria and Firmicute
 
 
 
+
+**Figure3**: Abundance of bacteria in females samples
 ```{r histogram-showing-the-abundance-of-different-bacteria-in-females-samples}
 # The third histogram that shows the females microbioms
 female_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "female")
@@ -352,6 +362,7 @@ Bacilli and Chloroplast classes.
        
        
        
+**Figure4**: Abundance of bacteria in males samples
 ```{r histogram-showing-the-abundance-of-different-bacteria-in-males-samples}
 # The last histogram,shows the males microbiomes inorder to compare with females
 male_phyloseq_obj <- subset_samples(phyloseq_obj, Sex == "male")
